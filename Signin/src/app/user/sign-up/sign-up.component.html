@@ -1,0 +1,32 @@
+<div>
+  <img src="/assets/users.png" id="icon" alt="User Icon" style="height: 100px; width: 70px"/>
+</div>
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+    <input type="text" #first_name="ngModel" [(ngModel)]="userService.selectedUser.first_name" name= "first_name" placeholder="First Name"
+    required [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !first_name.valid}"/>
+
+    <input type="text" #last_name="ngModel" [(ngModel)]="userService.selectedUser.last_name" name= "last_name" placeholder="Last Name"
+    required [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !last_name.valid}"/>
+
+    <input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" placeholder="Email"
+    required [pattern]="emailRegex" [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !email.valid}"/>
+
+    <input type="text" #major="ngModel" [(ngModel)]="userService.selectedUser.major" name="major" placeholder="Major"
+    required [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !major.valid}"/>
+
+    <input type="text" #w_num="ngModel" [(ngModel)]="userService.selectedUser.w_num" name="w_num" placeholder="W Number"
+    minlength= "8" maxlength= "8" required [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !w_num.valid}"/>
+
+    <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+    minlength= "6" required [ngClass]= "{'invalid-textbox' :signUpForm.submitted && !password.valid}"/>
+
+    <input type="submit" value="sign Up" onclick='window.location.href="http://localhost:4200/login"'/>
+</form>
+
+<div class = "success" *ngIf="showSucessMessage">
+    Saved successfully
+</div>
+
+<div class= "alert" *ngIf= "serverErrorMessage">
+    {{serverErrorMessage}}
+</div>

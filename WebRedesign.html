@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>ACM Home</title>
+<head><link rel="ACM Icon" href="ACM Photos/acm logo.png"></head>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "RobotoRegular", Arial, Helvetica, sans-serif}
+body {font-size:14px;}
+</style>
+
+ <div class="header" id="myHeader">
+     <h2><link rel="ACM Icon" href="ACM Photos/acm logo.png"></h2>
+    <h2>SELU</h2>
+  </div> 
+<style>
+    .fixed-header-scroll #logo-container a {
+  background-image: url("ACM Photos/southeastern-logo.png") !important;
+  background-size:cover;
+  width:50px;
+  height:50px;
+}
+.fixed-header-scroll #logo-container img{
+ display:none;
+}
+  /* Style the header */
+
+.header {
+  padding: 16px 18px;
+  background: #006633;
+  color: white;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}  </style>
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+} </script>

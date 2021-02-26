@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Officers</title>
+    <head><link rel="ACM Icon" href="ACM Photos/acm logo.png"></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body {
+      font-size:16px;
+      
+    }
+    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+    .w3-half img:hover{opacity:1}
+    </style>
+    <body>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+      <div class="w3-container">
+        <p><br></p>
+        <img src="southeastern-logo.png" alt="logo" style="width:100%">
+        <p><br></p>
+      </div>
+      <div class="w3-bar-block">
+        <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="About Us" onclick='window.location.href="index.html"'/>
+        <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Officers" onclick='window.location.href="Officers.html"'/>
+        <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Calendar" onclick='window.location.href="Calendar.html"'/> 
+        <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Resources" onclick='window.location.href="Resources.html"'/> 
+        <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Events" onclick='window.location.href="Events.html"'/> 
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="654921861260-26j5c7bn047qcuceir202gak2vvn6gcl.apps.googleusercontent.com">
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <br>
+        <input type="button" name="doCreate" class="w3-button w3-block w3-padding-large w3-hover-white w3-yellow w3-margin-bottom" value="Sign Up and Sign In" onclick='window.location.href="http://localhost:4200/signup"'/>
+        <input type="button" name="doCreate" class="w3-button w3-block w3-padding-large w3-hover-white w3-yellow w3-margin-bottom" value="Meeting Check-In" onclick='window.location.href="CheckIn.html"'/>
+      </div>
+    </nav>
+    
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+      <a href="javascript:void(0)" class="w3-button w3-green w3-margin-left" onclick="w3_open()">☰</a>
+      
+      <span>Association for Computing Machinery</span>
+    </header>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+    
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:80px" id="showcase">
+       
+        <h1 class="w3-xlarge w3-text-yellow"><b><br>"Advancing Computing as a Science & Profession."</b></h1>
+      </div>
+     
+      <!-- Bios -->
+      <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/pao.resize.jpg" alt="Pao" style="width:100%">
+            <div class="w3-container">
+              <h3>Kuo-pao<br>Yang</h3>
+              <p class="w3-opacity">Faculty Advisor</p>
+              <div class="myBox">
+                  Kuo-pao Yang is a professor in the Department of Computer Science at Southeastern Louisiana University.He received his B.S. degree in Computer Science at Tamkang University, Taipei, Taiwan, R.O.C. He earned his M.S. and his Ph.D. degree in Computer Science at Illinois Institute of Technology. His research interests include Computer Architecture, Programming Languages, and Expert Systems.
+              </div>
+            </details>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/Jamie.jpg" alt="Jamie" style="width:100%">
+            <div class="w3-container">
+              <h3>Jamie<br>Peterson</h3>
+              <p class="w3-opacity">Chair</p>
+              <div class="myBox">
+                  Jamie Peterson is a junior Computer Science major in the scientific concentration, and she is pursuing a minor in math. She is currently an intern at Entergy working in Robotic Process Automation (RPA). After recieving her Bachelors degree, she hopes to pursue a graduate degree. 
+                Outside of academics, her interests are traveling, attending concerts, and playing with her two dogs. 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/conner.jpg" alt="Connor" style="width:100%">
+            <div class="w3-container">
+              <h3>Connor<br>Vincent</h3>
+              <p class="w3-opacity">Vice-Chair<p>
+                  <div class="myBox">
+                      Connor is a senior majoring in computer science (scientific) with a minor in math. He is currently interning at the Naval Research Laboratory. He is interested in machine learning and is planning to pursue a graduate degree. Connor appreciates technology, comedy, investing, gaming, cooking, and bothering Dr. Burris.
+                  </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/lauren.jpg" alt="Lauren" style="width:100%">
+            <div class="w3-container">
+              <h3>Lauren<br>Pace</h3>
+              <p class="w3-opacity">Treasurer</p>
+              <div class="myBox">
+                Lauren Pace is a Junior Computer Science Major. Along with being the Treasurer for the Association for Computing Machinery, she is also the Vice-President for Rotaract Club at Southeastern Louisiana University. Outside of school she enjoys hiking and traveling.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/Ash.resize.jpg" alt="Ashlynn" style="width:100%">
+            <div class="w3-container">
+              <h3>Ashlynn<br>Martell</h3>
+              <p class="w3-opacity">Secretary</p>
+              <div class="myBox">
+                  Ashlynn is a sophomore pursuing a Computer Science degree with a scientific concentration. She works at the Center for Student Excellence.Over this past summer she interned at ITinspired in Baton Rouge and taught at Southeastern’s Lion’s Code Camp. Currently, she serves as an officer of ACM, ACM-W, and WIT.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="ACM Photos/garth.resize.jpg" alt="garth" style="width:100%">
+            <div class="w3-container">
+              <h3>Garth<br>Kiepper</h3>
+              <p class="w3-opacity">Ghost</p>
+              <div class="myBox">
+                  Garth Kiepper is from Las Vegas, Nevada. He majored in Computer Science with a scientific concentration.He also participated in the University scholars program at Southeastern Louisiana University He was an officer of the Association for Computing Machinery for two years, since Spring 2017. Garth started as an intern systems engineer at Southeastern's Office of Technology in his first semester. Under the direction of Dr. John Burris and Ray DeJean he completed his senior honors thesis; Penetration Test of Identification Cards & User Account Systems. After graduating, Garth works as an Information Security Specialist alongside system and network administrators to help maintain and secure critical technology infrastructure for the Office of Technology at Southeastern.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    <!-- End page content -->
+    </div>
+    
+    <script>
+    
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    </script>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: "Poppins", sans-serif}
+    * {box-sizing: border-box;}
+    
+    /* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+    
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+    
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: grey;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    body {
+    margin-bottom: 20%;
+    }
+    
+    /* Box styles */
+    .myBox {
+    border: none;
+    padding: 5px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+    
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    background: rgb(197, 196, 196);
+    border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(255, 255, 255);  
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #999;  
+    }
+    
+    </style>
+    </head>
+    <body>
+        <button class="open-button" onclick="openForm()">Contact Us</button>
+    
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Contact Us</h1>
+    
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+    
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    </body>
+    </html>
+ 

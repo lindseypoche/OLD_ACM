@@ -1,0 +1,188 @@
+<!--
+  Copyright 2018 Square Inc.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- link to the SqPaymentForm library -->
+    <script type="text/javascript" src="https://js.squareupsandbox.com/v2/paymentform">
+    </script>
+
+    <!-- link to the local custom styles for SqPaymentForm -->
+    <link rel="stylesheet" type="text/css" href="mysqpaymentform.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<style>
+  body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+  body {font-size:16px;}
+  .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+  .w3-half img:hover{opacity:1}
+  </style>
+    
+    <title>Fee Payment</title>
+    <meta charset="UTF-8">
+    <link rel="ACM Icon" href="ACM Photos/acm logo.png">
+    
+    <!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <p><br></p>
+    <img src="southeastern-logo.png" alt="logo" style="width:100%">
+    <p><br></p>
+  </div>
+
+  <div class="w3-bar-block">
+    <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="About Us" onclick='window.location.href="index.html"'/>
+    <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Officers" onclick='window.location.href="Officers.html"'/>
+    <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Calendar" onclick='window.location.href="Calendar.html"'/> 
+    <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Resources" onclick='window.location.href="Resources.html"'/> 
+    <input type="button" name="doCreate" class="w3-bar-item w3-button w3-hover-white" value="Events" onclick='window.location.href="Events.html"'/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="654921861260-26j5c7bn047qcuceir202gak2vvn6gcl.apps.googleusercontent.com">
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+   </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-green w3-margin-left" onclick="w3_open()">☰</a>
+  <img src="S_logo.png" alt="logo" style="height:100%">
+  <span>Association for Computing Machinery</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  </head>
+  <body>   
+
+    <!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+     
+      <h1 class="w3-xlarge w3-text-yellow"><b><br>"Advancing Computing as a Science & Profession."</b></h1>
+    </div>
+  
+  <!--Membership Fee-->
+  <div class="w3-container" id="About" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-yellow"><b>Membership Fee</b></h1>
+    <p>The membership fee is $15 for a year.</p>  
+  </div>
+
+
+   <div id="form-container" style="position: relative; top:100px">
+        <div id="sq-card-number"></div>
+        <div class="third" id="sq-expiration-date"></div>
+        <div class="third" id="sq-cvv"></div>
+        <div class="third" id="sq-postal-code"></div>
+        <button id="sq-creditcard" class="button-credit-card" onclick="onGetCardNonce(event)">Pay $15.00</button>
+    </div> <!-- end #form-container --> 
+    
+    <img src="Square.png" alt="Square" style="position: absolute; bottom: 10px; right: 10px; height:10%">
+
+    <script type="text/javascript">
+        // Create and initialize a payment form object
+        const paymentForm = new SqPaymentForm({
+          // Initialize the payment form elements
+          
+          applicationId: "sandbox-sq0idb-6jDlZ8Lzdfu3ssKHkTGx-Q",
+          inputClass: 'sq-input',
+          autoBuild: false,
+          // Customize the CSS for SqPaymentForm iframe elements
+          inputStyles: [{
+              fontSize: '16px',
+              lineHeight: '24px',
+              padding: '16px',
+              placeholderColor: '#a0a0a0',
+              backgroundColor: 'transparent',
+          }],
+          // Initialize the credit card placeholders
+          cardNumber: {
+              elementId: 'sq-card-number',
+              placeholder: 'Card Number'
+          },
+          cvv: {
+              elementId: 'sq-cvv',
+              placeholder: 'CVV'
+          },
+          expirationDate: {
+              elementId: 'sq-expiration-date',
+              placeholder: 'MM/YY'
+          },
+          postalCode: {
+              elementId: 'sq-postal-code',
+              placeholder: 'Postal'
+          },
+          // SqPaymentForm callback functions
+          callbacks: {
+              /*
+              * callback function: cardNonceResponseReceived
+              * Triggered when: SqPaymentForm completes a card nonce request
+              */
+              cardNonceResponseReceived: function (errors, nonce, cardData) {
+              if (errors) {
+                  // Log errors from nonce generation to the browser developer console.
+                  console.error('Encountered errors:');
+                  errors.forEach(function (error) {
+                      console.error('  ' + error.message);
+                  });
+                  alert('Encountered errors, check browser developer console for more details');
+                  return;
+              }
+                fetch('process-payment', {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  nonce: nonce
+                })
+              })
+              .catch(err => {
+                alert('Network error: ' + err);
+              })
+              .then(response => {
+                if (!response.ok) {
+                  return response.text().then(errorInfo => Promise.reject(errorInfo));
+                }
+                return response.text();
+              })
+              .then(data => {
+                console.log(JSON.stringify(data));
+                alert('Payment complete successfully!\nCheck browser developer console for more details');
+              })
+              .catch(err => {
+                console.error(err);
+                alert('Payment failed to complete!\nCheck browser developer console for more details');
+              });
+              }
+          }
+        });
+        paymentForm.build();
+        // onGetCardNonce is triggered when the "Pay $15.00" button is clicked
+        function onGetCardNonce(event) {
+        // Don't submit the form until SqPaymentForm returns with a nonce
+        event.preventDefault();
+        // Request a nonce from the SqPaymentForm object
+        paymentForm.requestCardNonce();
+        }
+
+      </script>
+   
+   
+  </body>
+</html>
+

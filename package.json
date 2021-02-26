@@ -1,0 +1,33 @@
+{
+  "name": "cmps285-fall2019-section02-group1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DB Connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clintonjwalker/cmps285-fall2019-section02-group1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clintonjwalker/cmps285-fall2019-section02-group1/issues"
+  },
+  "homepage": "https://github.com/clintonjwalker/cmps285-fall2019-section02-group1#readme",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-list-endpoints": "^4.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11",
+    "nodemon": "^1.19.4",
+    "square-connect": "^2.20191120.0"
+  },
+  "devDependencies": {}
+}
